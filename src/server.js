@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 require("dotenv").config({ path: "src/.env" });
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -18,6 +19,6 @@ mongoose
   .then(() => console.log("✅ MongoDB Connected"))
   .catch((err) => console.log("❌ MongoDB Error", err));
 
-app.listen(5000, () => {
-  console.log("🚀 Server Started");
+app.listen(PORT, () => {
+  console.log(`🚀 Server Started on ${PORT}`);
 });
