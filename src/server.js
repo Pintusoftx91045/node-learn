@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
+const bookingRoutes = require("./routes/bookingRoutes");
 
 require("dotenv").config({ path: "src/.env" });
 
@@ -26,6 +27,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/users", userRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 app.get("/", (req, res) => {
   res.send("Server Running...");
