@@ -140,6 +140,7 @@ const getUsers = async (req, res) => {
     });
   }
 };
+
 const getUserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
@@ -157,6 +158,7 @@ const getUserById = async (req, res) => {
     });
   }
 };
+
 const updateUser = async (req, res) => {
   try {
     const user = await User.findByIdAndUpdate(
@@ -178,6 +180,7 @@ const updateUser = async (req, res) => {
     });
   }
 };
+
 const deleteUser = async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);
