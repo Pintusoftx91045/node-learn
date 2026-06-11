@@ -16,7 +16,7 @@ app.use(
     origin: [
       "http://localhost:5173", // Vite local
       "http://localhost:3000", // Next.js local
-      "https://your-frontend-domain.vercel.app", // Live frontend URL
+      "https://booking-management-gamma.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
